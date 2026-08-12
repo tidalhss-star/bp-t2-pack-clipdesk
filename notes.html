@@ -3,324 +3,384 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메모 | 짐 줄이는 방법과 부피 분석</title>
-    <meta name="description" content="부피와 분류를 통해 합리적으로 짐을 줄이는 방법과 이에 따른 운송·보관 비용 구조를 투명하게 분석합니다. 처음 이용하시는 분들을 위한 필수 가이드.">
-    <meta name="keywords" content="짐 줄이는 방법, 부피 줄이기, 이사 비용 구조, CBM 계산, 짐 분류 기준">
+    <title>메모 | 짐 줄이는 방법 — 실무자를 위한 직설적 가이드</title>
+    <meta name="description" content="단체 이동과 대규모 행사를 준비하는 실무자를 위한 짐 줄이는 방법 핵심 가이드. 압축과 분류를 통한 부피 최적화 및 현장 검증 기준을 제공합니다.">
+    <meta name="keywords" content="짐 줄이는 방법, 부피 최적화, 수하물 압축, 단체 이동 물류, 미니멀 패킹">
     <link rel="canonical" href="https://pack.clipdesk.shop/notes.html">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="메모 | 짐 줄이는 방법과 부피 분석">
-    <meta property="og:description" content="부피와 분류를 통해 합리적으로 짐을 줄이는 방법과 이에 따른 운송·보관 비용 구조를 투명하게 분석합니다. 처음 이용하시는 분들을 위한 필수 가이드.">
+    <meta property="og:title" content="메모 | 짐 줄이는 방법 — 실무자를 위한 직설적 가이드">
+    <meta property="og:description" content="단체 이동과 대규모 행사를 준비하는 실무자를 위한 짐 줄이는 방법 핵심 가이드. 압축과 분류를 통한 부피 최적화 및 현장 검증 기준을 제공합니다.">
     <meta property="og:url" content="https://pack.clipdesk.shop/notes.html">
 
     <style>
         /* CSS Reset & Variables */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        :root {
+            --bg-color: #141416;
+            --text-color: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-color: #ff3e3e;
+            --card-bg: #1f1f22;
+            --border-color: #2d2d30;
+            --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
         }
 
-        :root {
-            --bg-color: #f4f4f0;
-            --border-color: #1a1a1a;
-            --card-bg-yellow: #fdf6e2;
-            --card-bg-blue: #e3fafc;
-            --card-bg-green: #ebfbee;
-            --text-color: #1a1a1a;
-            --accent-color: #ff6b6b;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
+            font-family: var(--font-sans);
             line-height: 1.6;
-            padding: 20px;
+            padding: 0;
+            margin: 0;
+            word-break: keep-all;
         }
 
-        /* Retro Neo-Brutalism Utilities */
-        .v-box-3ng7-border {
-            border: 3px solid var(--border-color);
-            box-shadow: 5px 5px 0px 0px var(--border-color);
-            background-color: #ffffff;
-            padding: 24px;
-            margin-bottom: 24px;
-            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        /* Semantic Marker Hidden Style */
+        .v-side-90ti-marker {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
 
-        .v-box-3ng7-border:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 7px 7px 0px 0px var(--border-color);
+        /* Header Style (Status Bar / Nav) */
+        .v-img-dq1i-bar {
+            background-color: #0b0b0c;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        /* Header / Navigation */
-        .v-side-3ght-bar {
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 4px solid var(--border-color);
-            padding-bottom: 15px;
-            margin-bottom: 30px;
+            padding: 1rem 2rem;
         }
 
-        .v-side-3ght-logo {
-            font-size: 1.8rem;
+        .nav-logo {
             font-weight: 900;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: -1px;
-            background: var(--accent-color);
-            color: white;
-            padding: 5px 15px;
-            border: 3px solid var(--border-color);
-            box-shadow: 3px 3px 0px var(--border-color);
-            text-decoration: none;
+            letter-spacing: 1px;
         }
 
-        .v-nav-links {
+        .nav-links {
             display: flex;
-            gap: 15px;
+            gap: 1.5rem;
         }
 
-        .v-nav-links a {
+        .nav-links a {
+            color: var(--text-muted);
             text-decoration: none;
-            color: var(--text-color);
-            font-weight: 700;
-            font-size: 1rem;
-            border: 2px solid var(--border-color);
-            padding: 5px 10px;
-            background: white;
-        }
-
-        .v-nav-links a:hover {
-            background: var(--card-bg-yellow);
-        }
-
-        /* Main Grid Layout */
-        .m-top-wgqb-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 24px;
-        }
-
-        @media (max-width: 992px) {
-            .m-top-wgqb-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Typography & Custom Classes */
-        .badge {
-            display: inline-block;
-            padding: 4px 8px;
-            font-weight: 800;
-            font-size: 0.85rem;
-            border: 2px solid var(--border-color);
-            margin-bottom: 12px;
-            background-color: var(--card-bg-blue);
-        }
-
-        .badge-red {
-            background-color: var(--accent-color);
-            color: white;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            border-left: 6px solid var(--accent-color);
-            padding-left: 10px;
-            letter-spacing: -0.5px;
-        }
-
-        .highlight-text {
-            background: linear-gradient(to top, #ffe066 40%, transparent 40%);
-            font-weight: bold;
-        }
-
-        .memo-meta {
             font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 15px;
-            font-family: monospace;
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
 
-        /* Table Design */
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            border: 3px solid var(--border-color);
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-color);
         }
 
-        .info-table th, .info-table td {
-            border: 2px solid var(--border-color);
-            padding: 12px;
+        /* Title Block */
+        .t-box-bjlv-block {
+            max-width: 800px;
+            margin: 4rem auto 2rem auto;
+            padding: 0 2rem;
             text-align: left;
         }
 
-        .info-table th {
-            background-color: var(--card-bg-yellow);
+        .v-side-630i-title {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            text-transform: uppercase;
+        }
+
+        .v-side-630i-title span {
+            color: var(--accent-color);
+        }
+
+        .k-body-k11v-title {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        /* Main Grid Layout */
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto 6rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Journal / Memo Container */
+        .journal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+            margin-top: 3rem;
+        }
+
+        .journal-item {
+            border-top: 2px solid var(--text-color);
+            padding-top: 1.5rem;
+            position: relative;
+        }
+
+        .journal-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .journal-meta .date {
+            background-color: var(--accent-color);
+            color: #000;
+            padding: 0.2rem 0.6rem;
+            font-weight: 900;
+        }
+
+        .journal-meta .category {
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .journal-content h2 {
+            font-size: 1.8rem;
             font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            line-height: 1.3;
+        }
+
+        .journal-content p {
+            font-size: 1.05rem;
+            color: #d1d5db;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .journal-content p strong {
+            color: #fff;
+            background-color: #2d2d30;
+            padding: 0.1rem 0.3rem;
+        }
+
+        /* Warnings & Callouts */
+        .critique-box {
+            background-color: #1a0b0b;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .critique-box h3 {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .critique-box p {
+            font-size: 0.95rem;
+            color: #e5e7eb;
+            margin-bottom: 0;
+            line-height: 1.6;
         }
 
         /* Footer */
         footer {
-            margin-top: 50px;
-            border-top: 4px solid var(--border-color);
-            padding-top: 20px;
-            font-size: 0.9rem;
-            color: #555;
+            border-top: 1px solid var(--border-color);
+            background-color: #0b0b0c;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .v-side-630i-title {
+                font-size: 2.2rem;
+            }
+            .nav-container {
+                padding: 1rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+            .main-container {
+                padding: 0 1rem;
+            }
+            .t-box-bjlv-block {
+                padding: 0 1rem;
+                margin-top: 2rem;
+            }
         }
     </style>
   <meta name="twitter:card" content="summary">
 </head>
-<body>
+<body class="nav-present responsive-768">
 
-    <!-- Header (Status Bar Style) -->
-    <header class="v-side-3ght-bar">
-        <a href="/" class="v-side-3ght-logo">PACK LESS</a>
-        <nav class="v-nav-links">
-            <a href="/">홈</a>
-            <a href="/memo">메모</a>
-        </nav>
-    </header>
+    <div class="v-side-90ti-marker">이 페이지는 대규모 행사 및 단체 이동 시 물류 부피를 극대화하여 줄이기 위한 현장 실무자용 지침을 담고 있습니다.</div>
 
-    <!-- Main Container -->
-    <main class="m-top-wgqb-wrapper">
-        
-        <!-- Left Column: Main Contents -->
-        <section>
-            
-            <!-- Article Card 1 -->
-            <article class="v-box-3ng7-border" style="background-color: #ffffff;">
-                <span class="badge badge-red">현장 실무자의 일침</span>
-                <h1 class="section-title">요즘 사람들이 짐 줄이기에 실패하는 진짜 이유</h1>
-                <p class="memo-meta">작성일: 2024-11-20 | 분류: 실무 관점의 직설</p>
-                
-                <p>요즘 이사철이나 보관 준비 기간만 되면 짐 줄이는 방법을 묻는 사람들이 부쩍 늘었다. 그런데 물어보는 꼬락서니들을 보면 하나같이 한심하기 짝이 없다. 대다수가 "어떤 상자를 사야 하느냐", "안 쓰는 옷은 기부하면 되느냐" 같은 겉핥기식 질문만 던진다. 진짜 핵심은 포장 용기가 아니라, 당신 방구석을 차지하고 있는 그 무거운 쓰레기들의 체적, 즉 물리적 부피를 직시하는 것인데 말이다.</p>
-                
-                <p>라떼는 말이다, 이사 견적을 낼 때 현장 작업자들이 눈대중으로 슥 훑어만 봐도 몇 톤 트럭이 들어와야 할지 계산이 10분 만에 끝났다. 왜냐고? 물건의 개수가 아니라 물건이 차지하는 입체 공간을 직관적으로 꿰뚫어 보고 있었기 때문이다. 요즘 세대들은 스마트폰 화면으로 견적 비교 어플만 들여다보며 단 몇만 원 깎아보겠다고 아등바등하지만, 정작 방 안에 굴러다니는 낡은 책장 하나, 쓰지도 않는 조립식 행거 하나가 전체 운송 톤수를 한 단계 올려버린다는 사실은 까맣게 모른다. <span class="highlight-text">구질구질한 미련을 버리지 못하면, 당신이 쓰는 이사 비용은 절대로 줄어들지 않는다.</span></p>
-                
-                <p>본질은 단순하다. 운송업체나 보관업체가 당신의 짐을 옮길 때 청구하는 비용은 당신 물건의 가치가 아니라, 그 물건들이 차지하는 공간의 크기에 비례한다. 아무리 비싸게 주고 산 명품 소파라도 부피가 3CBM이면 3CBM만큼의 운임이 나간다. 반대로 시장에서 주워온 싸구려 장롱이라도 부피가 크면 똑같이 비싼 값을 치러야 한다. 이 냉혹한 산수 공식을 이해하지 못하면 아무리 쓸데없는 짐 줄이는 요령을 읽어봤자 아무런 소용이 없다. 먼저 머릿속의 환상부터 비우고 시작해라.</p>
+    <!-- Header Style (Status Bar) -->
+    <header class="v-img-dq1i-bar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">PACK.CRITERIA</a>
+            <nav class="nav-links">
+                <a href="/">가이드</a>
+                <a href="/memo" class="active">메모</a>
+            </nav>
+        </div>
+    </</header>
+
+    <!-- Title Block -->
+    <section class="t-box-bjlv-block">
+        <h1 class="v-side-630i-title">RAW <span>MEMO</span></h1>
+        <p class="k-body-k11v-title">
+            현장에서 굴러먹던 늙은이가 던지는 짐 줄이기의 본질. 포장 쪼가리에 목숨 거는 아마추어 기획자들을 위한 뼈 때리는 현장 일지식 스니펫과 실전 기준들.
+        </p>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="main-container">
+        <div class="journal-list">
+
+            <!-- Entry 1 -->
+            <article class="journal-item">
+                <div class="journal-meta">
+                    <span class="date">ENTRY #01</span>
+                    <span class="category">부피 vs 무게</span>
+                </div>
+                <div class="journal-content">
+                    <h2>무게 타령 좀 그만해라, 진짜 문제는 부피다</h2>
+                    <p>
+                        요즘 대규모 행사 기획한다는 젊은 친구들 패킹 리스트를 보면 기가 찬다. 소수점 아래 단위까지 디지털 저울로 무게 재가면서 가볍게 만들었다고 뿌듯해하는 꼴을 보면 헛웃음만 나온다. 진짜 현장을 모르는 소리다. 버스 짐칸이든, 5톤 탑차든 물류비는 무게가 아니라 <strong>체적(부피)</strong> 단위로 책정되는 게 기본이다. 무게가 가벼워봤자 부피가 산만하면 싣지 못하고 남겨진 짐들은 결국 퀵서비스 추가 비용으로 돌아온다.
+                    </p>
+                    <p>
+                        짐을 줄이는 방법의 대원칙은 아주 단순하다. 물품 내부의 공기를 완벽하게 제거하고, 유연한 소재는 짓눌러서 사각형 박스 안에 빈틈없이 밀어 넣는 거다. 옷가지나 패브릭 부자재를 그냥 얌전하게 접어서 넣는 건 공간에 대한 모독이다. 구겨져도 상관없는 현장 스태프 의류나 현수막 같은 천 쪼가리들은 진공 압축 백을 써서 돌덩이처럼 단단해질 때까지 공기를 빨아들여야 한다. 그게 진짜 짐을 줄이는 출발점이다.
+                    </p>
+                    <div class="critique-box">
+                        <h3>늙은이의 팩트 체크</h3>
+                        <p>저울 들고 다니면서 100g 줄였다고 좋아하지 마라. 가로, 세로, 높이 규격부터 통일해라. 적재 효율이 안 나오는 알록달록한 배낭 여러 개보다 꽉 채운 규격 박스 한 개가 트럭 적재 공간을 훨씬 적게 먹는다.</p>
+                    </div>
+                </div>
             </article>
 
-            <!-- Article Card 2: Technical Specs -->
-            <article class="v-box-3ng7-border" style="background-color: var(--card-bg-yellow);">
-                <span class="badge">수치적 기준</span>
-                <h2 class="section-title">CBM 단위로 이해하는 공간의 실체</h2>
-                <p class="memo-meta">작성일: 2024-11-20 | 분류: 물류 규격 데이터</p>
-                
-                <p>짐 줄이는 방법의 첫걸음은 자기가 가진 물건들을 수치화하는 것이다. 물류 업계에서 쓰는 표준 단위인 <strong>CBM(Cubic Meter)</strong>을 알아야 대화가 통한다. 가로, 세로, 높이가 각각 1미터인 정육면체 공간이 바로 1CBM이다. 감이 잘 안 오는가? 보통 우체국 5호 상자(가로 48cm, 세로 38cm, 높이 34cm)를 기준으로 잡았을 때, 이 상자가 약 16개 정도 모여야 1CBM을 겨우 채운다. 즉, 당신이 상자 16개를 버리면 이사 트럭에서 정확히 1CBM 만큼의 여유 공간을 확보할 수 있다는 뜻이다.</p>
-                
-                <p>대부분의 1인 가구가 원룸 이사를 할 때 "제 짐은 얼마 안 돼요"라고 자신 있게 말하지만, 실제로 짐을 싸보면 평균 3~5CBM이 나온다. 왜 이런 오차가 발생할까? 바로 가구와 가전제품의 빈 공간을 계산하지 않기 때문이다. 옷장 내부를 비운 채로 그대로 운반하면, 그 옷장 내부의 공기까지 돈을 내고 운송하는 꼴이 된다. 짐을 줄이겠다고 결심했다면 아래의 대략적인 부피 환산표를 보고 머릿속으로 덧셈부터 해라. 현실은 감정이 아니라 숫자로 굴러간다.</p>
-
-                <table class="info-table">
-                    <thead>
-                        <tr>
-                            <th>품목 분류</th>
-                            <th>표준 규격 (가로x세로x높이, m)</th>
-                            <th>대략적 부피 (CBM)</th>
-                            <th>처리 판단 기준</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>일반 싱글 침대</td>
-                            <td>1.0 x 2.0 x 0.4</td>
-                            <td>약 0.8</td>
-                            <td>프레임 분해 불가 시 폐기 권장</td>
-                        </tr>
-                        <tr>
-                            <td>2인용 소파</td>
-                            <td>1.6 x 0.8 x 0.8</td>
-                            <td>약 1.0</td>
-                            <td>쿠션 꺼짐 발생 시 현지 처분</td>
-                        </tr>
-                        <tr>
-                            <td>소형 냉장고 (200L)</td>
-                            <td>0.5 x 0.6 x 1.4</td>
-                            <td>약 0.4</td>
-                            <td>연식 5년 이상 시 처분 고려</td>
-                        </tr>
-                        <tr>
-                            <td>우체국 5호 박스</td>
-                            <td>0.48 x 0.38 x 0.34</td>
-                            <td>약 0.06</td>
-                            <td>의류 보관 시 압축팩 필수 사용</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <p>위 표를 보고도 감이 안 잡힌다면 가슴에 손을 얹고 생각해 봐라. 저 침대 프레임과 소파가 당신의 새로운 주거 공간에 정말로 필요한 물건인지. 쓸데없이 부피만 차지하는 대형 가구들을 과감히 처분하는 것만으로도 운송 차량의 등급이 2.5톤에서 1톤으로 내려갈 수 있다. 차종이 바뀌면 기본 운임의 자릿수가 달라진다. 돈을 아끼고 싶다면 미련 없이 버려라. 그것이 내가 현장에서 수십 년간 봐온 가장 확실한 진리다.</p>
+            <!-- Entry 2 -->
+            <article class="journal-item">
+                <div class="journal-meta">
+                    <span class="date">ENTRY #02</span>
+                    <span class="category">포장의 허상</span>
+                </div>
+                <div class="journal-content">
+                    <h2>박스 포장 쪼가리는 현장 도착하는 순간 쓰레기다</h2>
+                    <p>
+                        행사용 사은품이나 현장 배포용 굿즈를 원래 박스 포장 그대로 상자째 실어 나르는 바보들이 있다. 패키지 디자인이 예뻐서 훼손되면 안 된다고? 그럴 거면 현장 배포는 왜 하나? 겉포장용 개별 종이 상자나 완충용 트레이는 부피를 키우는 주범 중의 주범이다. 알맹이만 꺼내서 한꺼번에 에어캡으로 크게 묶고, 빈 박스는 납작하게 접어서 따로 가져가 현장에서 다시 조립하는 게 정석이다.
+                    </p>
+                    <p>
+                        포장 상자가 차지하는 공기 공간만 빼도 박스 개수를 절반으로 줄일 수 있다. 내 말을 안 믿고 박스째 가져갔다가 트럭 공간 모자라서 고속도로 위에서 발 동동 구르는 기획자들을 내가 한두 명 본 게 아니다. 기획서에 '완벽한 패키지 상태 유지'라고 멋지게 적어봤자, 현장 이동 중에 흔들려서 내부에서 박스끼리 부딪쳐 찌그러지는 게 다반사다. 알맹이 결속이 먼저고, 포장재 분리는 기본이다.
+                    </p>
+                </div>
             </article>
 
-            <!-- Article Card 3: Sorting Standards -->
-            <article class="v-box-3ng7-border">
-                <span class="badge" style="background-color: var(--card-bg-green);">실행 가이드</span>
-                <h2 class="section-title">냉혹한 3대 분류 기준: 보관할 것인가, 버릴 것인가</h2>
-                <p class="memo-meta">작성일: 2024-11-20 | 분류: 의사결정 알고리즘</p>
-                
-                <p>사람들이 짐을 분류할 때 가장 많이 하는 착각이 있다. "언젠가 쓰겠지"라는 생각이다. 분명히 말하는데, 그 '언젠가'는 절대 오지 않는다. 지난 6개월 동안 단 한 번도 손대지 않은 물건은 앞으로의 6년 동안도 만질 일이 없다. 이것은 단순한 경험담이 아니라 통계가 증명하는 사실이다. 물건에 깃든 추억이니 뭐니 하는 감상적인 소리는 집어치우고, 철저하게 기능과 사용 빈도로만 짐을 분류해야 한다. 그렇지 않으면 당신은 결국 쓰레기를 돈 주고 이사시키는 멍청한 짓을 반복하게 된다.</p>
-                
-                <p>내가 제시하는 분류 기준은 딱 세 가지다. 첫째, 대체 불가능한 필수품인가. 둘째, 부피 대비 보관·운송 비용이 물건 자체의 재구매 가치보다 낮은가. 셋째, 최근 180일 이내에 실제로 사용한 적이 있는가. 이 세 가지 필터를 통과하지 못하는 물건들은 예외 없이 처분 대상이다. 특히 책이나 무거운 앨범, 철 지난 겨울 옷들이 여기에 해당한다. 책 한 상자의 무게와 부피를 우습게 보지 마라. 서재를 통째로 옮기려다 이사 비용만 두 배로 깨지는 집들을 내 눈으로 수백 번도 넘게 봤다.</p>
-                
-                <p>옷장을 정리할 때도 마찬가지다. "살 빼면 입어야지" 하고 모셔둔 옷들, 당장 헌 옷 수거함에 집어넣어라. 당신이 살을 빼는 속도보다 트렌드가 바뀌는 속도가 훨씬 빠르다. 정 아까운 브랜드 의류가 있다면 중고 거래 플랫폼에 헐값에라도 올려서 당장 치워버리는 게 이득이다. 짐을 줄여서 아끼는 평당 보관 비용과 운임이 그 옷들을 중고로 팔아 얻는 푼돈보다 훨씬 크다는 사실을 왜 계산하지 못하는가? 계산기를 두드려보면 답은 이미 나와 있다.</p>
+            <!-- Entry 3 -->
+            <article class="journal-item">
+                <div class="journal-meta">
+                    <span class="date">ENTRY #03</span>
+                    <span class="category">예비품이라는 핑계</span>
+                </div>
+                <div class="journal-content">
+                    <h2>'혹시 몰라서' 챙기는 짐은 100% 안 쓴다</h2>
+                    <p>
+                        가방을 쌀 때 가장 경계해야 할 단어가 바로 "혹시 모르니까"다. 이 단어가 나오는 순간 패킹 리스트는 겉잡을 수 없이 비대해진다. 경험이 부족할수록 불안감을 짐의 양으로 메우려고 든다. 예비용 멀티탭, 혹시 모를 여분의 무전기 배터리, 만약의 사태를 대비한 우천용 판초 우의 수백 장... 장담하는데, 그 '혹시' 하는 상황은 안 온다. 설령 온다 해도 현장 근처 다이소나 철물점에서 돈 몇 만 원 주고 조달하는 게 물류 왕복 비용보다 훨씬 싸게 먹힌다.
+                    </p>
+                    <p>
+                        진정한 짐 줄이는 방법은 과감하게 버리는 결단력에서 나온다. 대체가 불가능한 핵심 장비(예컨대 메인 컨트롤러나 전용 케이블)를 제외한 소모품성 예비 부자재는 리스트에서 과감하게 지워라. 현장을 통제하는 건 철저한 사전 준비지, 가방 속에 처박아 둔 잡동사니가 아니다. 짐이 많으면 현장에서 필요한 물건을 찾는 데 걸리는 시간만 늘어날 뿐이다. 수많은 박스 사이를 헤매다가 결국 현장에서 새로 사러 뛰어가는 꼴을 보면 참 눈물이 앞을 가린다.
+                    </p>
+                    <div class="critique-box">
+                        <h3>현장 검증 법칙</h3>
+                        <p>패킹 리스트에서 '예비'라는 단어가 들어간 항목을 전부 형광펜으로 칠해봐라. 그리고 그중에서 현장 반경 5km 이내에서 구매할 수 있는 건 가차 없이 삭제해라. 그것만 빼도 적재 공간 30%는 즉시 확보된다.</p>
+                    </div>
+                </div>
             </article>
 
-        </section>
-
-        <!-- Right Column: Sidebar / Snippets -->
-        <aside>
-            
-            <!-- Sidebar Card 1: Author Profile -->
-            <div class="v-box-3ng7-border" style="background-color: var(--card-bg-blue);">
-                <h3 style="font-size: 1.2rem; font-weight: 900; margin-bottom: 10px;">필자 소개</h3>
-                <p style="font-size: 0.95rem; line-height: 1.5; color: #333;">
-                    업계에서 잔뼈가 굵은 베테랑 해결사. 요즘 유행하는 미니멀리즘이니 감성 정리니 하는 말장난을 싫어합니다. 오직 물류 통계와 비용 효율성만을 기준으로 팩트를 폭격합니다.
-                </p>
-            </div>
-
-            <!-- Sidebar Card 2: Key Snippets -->
-            <div class="v-box-3ng7-border">
-                <h3 style="font-size: 1.2rem; font-weight: 900; margin-bottom: 15px;">핵심 스니펫</h3>
-                
-                <div style="margin-bottom: 15px; border-bottom: 2px dashed var(--border-color); padding-bottom: 10px;">
-                    <span style="font-weight: 800; font-size: 0.9rem; color: var(--accent-color);">[공식] 부피 계산법</span>
-                    <p style="font-size: 0.85rem; margin-top: 5px;">가로(m) x 세로(m) x 높이(m) = CBM<br>예: 0.5m x 0.5m x 0.8m = 0.2 CBM</p>
+            <!-- Entry 4 -->
+            <article class="journal-item">
+                <div class="journal-meta">
+                    <span class="date">ENTRY #04</span>
+                    <span class="category">규격 통일</span>
                 </div>
-
-                <div style="margin-bottom: 15px; border-bottom: 2px dashed var(--border-color); padding-bottom: 10px;">
-                    <span style="font-weight: 800; font-size: 0.9rem; color: var(--accent-color);">[경고] 압축 불가 품목</span>
-                    <p style="font-size: 0.85rem; margin-top: 5px;">가죽 자켓, 오리털 패딩(장기 압축 시 충전재 손상), 두꺼운 전공 서적(무게 폭발의 주범).</p>
+                <div class="journal-content">
+                    <h2>각자 짐 싸오게 만든 놈은 시말서 써야 한다</h2>
+                    <p>
+                        스태프들한테 "내일 출발하니까 개인 짐 각자 싸서 모이세요"라고 공지하는 팀장들이 있다. 이건 그냥 물류를 포기하겠다는 선언이나 다름없다. 이 말을 듣고 모인 인간들의 가방을 보면 아주 가관이다. 누구는 동그란 이민 가방, 누구는 하드 캐리어, 누구는 등산 배낭에 비닐봉지까지 주렁주렁 매달고 나타난다. 이걸 트럭에 어떻게 효율적으로 쌓을 건가? 테트리스 게임도 블록 모양이 규격화되어 있으니까 맞춰 들어가는 거다.
+                    </p>
+                    <p>
+                        개인 짐은 무조건 규격화된 백팩 하나로 제한해라. 그리고 나머지 모든 공용 장비와 물품은 <strong>우체국 5호 박스</strong>나 플라스틱 카고 박스로 통일해야 한다. 규격화된 박스는 적치 효율을 극대화하고 이동 중에 짐이 쏠려 파손되는 걸 막아준다. 짐을 줄인다는 건 단순히 절대적인 부피를 깎아내는 것뿐만 아니라, 빈틈없이 맞물리게 만들어 '죽는 공간(Dead Space)'을 제로로 만드는 과정까지 포함하는 개념이다. 이 기본도 모르는 친구들이 꼭 현장 가서 짐 안 들어간다고 징징댄다.
+                    </p>
                 </div>
+            </article>
 
-                <div>
-                    <span style="font-weight: 800; font-size: 0.9rem; color: var(--accent-color);">[조언] 버릴 때 우선순위</span>
-                    <p style="font-size: 0.85rem; margin-top: 5px;">가구 > 대형 가전 > 책 > 이불 > 의류 순으로 정리해야 부피 감소 체감이 가장 큽니다.</p>
+            <!-- Entry 5 -->
+            <article class="journal-item">
+                <div class="journal-meta">
+                    <span class="date">ENTRY #05</span>
+                    <span class="category">흔들림 테스트</span>
                 </div>
-            </div>
+                <div class="journal-content">
+                    <h2>가방을 흔들었을 때 소리가 나면 실패다</h2>
+                    <p>
+                        패킹이 완전히 끝났다고 생각하면 박스나 가방을 잡고 사정없이 흔들어 봐라. 안에서 '덜컹' 하거나 물건들이 부딪히는 소리가 들린다면 그 패킹은 완전히 실패한 거다. 빈 공간이 존재한다는 증거이고, 그 빈 공간만큼 쓸데없이 부피를 낭비하고 있다는 뜻이다. 게다가 이동 중에 트럭 흔들림에 의해 내부 물품이 쏠려 깨지거나 파손되기 딱 좋은 상태다.
+                    </p>
+                    <p>
+                        짐을 줄이라는 말을 오해해서 가방 안에 물건을 헐렁하게 넣고 "어쨌든 가방 개수를 줄였으니 됐다"고 자위하는 애들이 있는데, 참 한심하다. 빈 공간은 수건이나 여분의 티셔츠, 에어캡 같은 완충재로 꽉꽉 눌러 채워서 밀도를 한계까지 높여야 한다. 밀도가 높아야 흔들리지 않고, 흔들리지 않아야 물건이 깨지지 않는다. 부피를 줄이는 진짜 기술은 밀도를 지배하는 데서 온다. 내 말이 잔소리처럼 들리겠지만, 현장 도착해서 박스 터져서 내용물 길바닥에 구르는 꼴 보기 싫으면 지금 당장 다시 싸라.
+                    </p>
+                </div>
+            </article>
 
-            <!-- Sidebar Card 3: Quick Quote Advice -->
-            <div class="v-box-3ng7-border" style="background-color: #ffffff;">
-                <h3 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 10px;">한 줄 요약 거부</h3>
-                <p style="font-size: 0.85rem; color: #555;">
-                    이 글에 요약본 따위는 없다. 짐을 줄이고 싶다면 위에서부터 한 자 한 자 정독해라. 세상에 날로 먹는 노하우는 존재하지 않는다. 스스로 자를 들고 방 안의 가구 규격을 재는 수고로움 없이는 단 10원도 아낄 수 없다.
-                </p>
-            </div>
-
-        </aside>
-
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="m-top-wgqb-wrapper" style="display: block; text-align: center;">
-        <p>© 2024 PACK LESS. All rights reserved.</p>
-        <p style="font-size: 0.8rem; margin-top: 5px; color: #888;">본 사이트는 합리적인 물류 부피 계산과 공간 정리를 돕는 정보 제공 목적의 블로그입니다.</p>
+    <footer>
+        <p>&copy; PACK.CRITERIA. All rights reserved.</p>
+        <p>제공된 정보에 기반한 현장 물류 부피 최적화 실무 가이드라인.</p>
     </footer>
 
 </body>
