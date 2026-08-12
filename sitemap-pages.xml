@@ -30,4 +30,24 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://pack.clipdesk.shop/posts/여행용-어댑터-국가별.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pack.clipdesk.shop/posts/캐리어-손잡이-수리-부품.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pack.clipdesk.shop/posts/캐리어-자물쇠-교체.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pack.clipdesk.shop/posts/캐리어-커버-사이즈-호환.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
