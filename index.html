@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>짐 줄이는 방법 — 처음 방문자를 위한 조건별 비용 구조 안내</title>
+    <meta name="description" content="부피와 분류를 통해 합리적으로 짐을 줄이는 방법과 이에 따른 운송·보관 비용 구조를 투명하게 분석합니다. 처음 이용하시는 분들을 위한 필수 가이드.">
+    <meta name="keywords" content="짐 줄이는 방법, 부피 줄이기, 이사 비용 구조, CBM 계산, 짐 분류 기준">
+    <link rel="canonical" href="https://pack.clipdesk.shop/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="짐 줄이는 방법 — 처음 방문자를 위한 조건별 비용 구조 안내">
+    <meta property="og:description" content="부피와 분류를 통해 합리적으로 짐을 줄이는 방법과 이에 따른 운송·보관 비용 구조를 투명하게 분석합니다. 처음 이용하시는 분들을 위한 필수 가이드.">
+    <meta property="og:url" content="https://pack.clipdesk.shop/">
+    <meta property="og:image" content="https://pack.clipdesk.shop/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="짐 줄이는 방법 — 처음 방문자를 위한 조건별 비용 구조 안내">
+    <meta name="twitter:description" content="부피와 분류를 통해 합리적으로 짐을 줄이는 방법과 이에 따른 운송·보관 비용 구조를 투명하게 분석합니다.">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://pack.clipdesk.shop/#localbusiness",
+          "name": "짐 줄이는 방법 연구소",
+          "url": "https://pack.clipdesk.shop",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울",
+            "addressRegion": "서울특별시",
+            "addressCountry": "KR"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://pack.clipdesk.shop/#service",
+          "provider": {
+            "@id": "https://pack.clipdesk.shop/#localbusiness"
+          },
+          "name": "공간 및 수납 부피 최적화 분석",
+          "description": "압축과 체계적 분류를 통한 이동·보관 비용 구조 분석 및 컨설팅 정보 제공"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pack.clipdesk.shop/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "짐의 부피(CBM)는 어떻게 계산하며, 실제 비용에 어떻게 반영되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CBM(Cubic Meter)은 가로, 세로, 높이를 각각 미터 단위로 곱한 부피 단위입니다. 운송 및 보관 비용은 이 총 CBM 값을 기준으로 기본 구간이 설정되며, 적재 효율에 따라 최종 청구 항목이 세분화됩니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "의류나 이불을 압축팩으로 줄였을 때 비용 절감 효과가 실제로 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "의류와 이불은 공간 대비 무게가 가볍고 부피가 큰 대표적인 항목입니다. 압축을 통해 CBM을 최대 50% 이상 줄일 수 있으며, 이는 차량 톤수 단계를 낮추거나 보관 컨테이너 규격을 축소하는 직접적인 요인이 됩니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "보관이나 운송 시 '기본 품목'과 '별도 추가 품목'의 경계는 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "일반 규격 박스에 포장되는 물품은 기본 품목에 해당하나, 형태가 정형화되지 않은 가구, 특수 가전, 피아노 등은 별도 품목으로 분류됩니다. 별도 품목은 특수 포장재 비용 및 추가 인건비가 발생할 수 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "처음이라 무엇부터 분류해야 할지 모르겠는데, 현장에서 물어봐도 불이익이 없나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "현장 조율 단계에서 세부 분류 기준을 질문하는 것은 합리적인 소비자의 권리입니다. 작업 시작 전에 명확히 질문하고 항목별 포함 여부를 확인해야 사후 추가 요금 분쟁을 예방할 수 있습니다."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://pack.clipdesk.shop/#author",
+          "name": "정민우",
+          "jobTitle": "공간 최적화 칼럼니스트",
+          "description": "서울 지역에서 7년간 공간 정리 및 물류 효율화 프로세스를 연구하며 축적한 실무 데이터를 바탕으로 합리적인 가이드를 제시합니다."
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --primary: #1b1a17;
+            --secondary: #f4f1ea;
+            --accent: #2a9d3d;
+            --font-mono: "Courier New", Courier, monospace;
+            --font-sans: ui-sans-serif, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-serif: "Playfair Display", "ChosunSg", "Times New Roman", Georgia, serif;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--primary);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Utility Styles for Retro Neo-Brutalism */
+        .v-box-3ng7-border {
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.015);
+            background-color: #ffffff;
+            transition: transform 0.2s ease;
+        }
+
+        /* Header (Status Bar Style) */
+        .v-side-3ght-bar {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 12px 24px;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .v-side-3ght-logo {
+            font-weight: bold;
+            letter-spacing: -0.5px;
+        }
+
+        /* Main Container */
+        .m-top-wgqb-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        @media (max-width: 768px) {
+            .m-top-wgqb-wrapper {
+                padding: 24px 16px;
+            }
+        }
+
+        /* Hero / Masthead Section */
+        .m-card-a3sz {
+            margin-bottom: 40px;
+            text-align: left;
+            border-bottom: 1px solid var(--primary);
+            padding-bottom: 24px;
+        }
+
+        .m-card-a3sz h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .m-card-a3sz p {
+            font-size: 1.15rem;
+            color: #555;
+            max-width: 700px;
+        }
+
+        @media (max-width: 768px) {
+            .m-card-a3sz h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Navigation Floating Dots */
+        .m-btn-uo34-nav {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 999;
+        }
+
+        .m-btn-uo34-item {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            border: 2px solid var(--secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .m-btn-uo34-item:hover,
+        .m-btn-uo34-item.active {
+            background-color: var(--accent);
+            transform: scale(1.3);
+        }
+
+        /* Grid Layout (3-Column Retro Cards) */
+        .t-img-yyub-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .t-foot-8jo1 {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Misalignment effect for retro brutalism */
+        .t-foot-8jo1:nth-child(odd) {
+            transform: rotate(-0.5deg);
+        }
+
+        .t-foot-8jo1:nth-child(even) {
+            transform: rotate(0.5deg);
+        }
+
+        .t-foot-8jo1-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            background-color: var(--accent);
+            color: white;
+            padding: 4px 8px;
+            align-self: flex-start;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+
+        .t-foot-8jo1-title {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .t-foot-8jo1-desc {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        /* 1-Column Narrative Transition */
+        .v-ico-up09-section {
+            background-color: #ffffff;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .v-ico-up09-section {
+                padding: 24px 16px;
+            }
+        }
+
+        .v-ico-up09-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 24px;
+            border-left: 5px solid var(--accent);
+            padding-left: 16px;
+        }
+
+        .q-txt-bylr {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            color: #2b2b2b;
+            text-align: justify;
+        }
+
+        /* Highlight Blockquote */
+        .n-body-c1jo {
+            background: linear-gradient(120deg, rgba(42, 157, 93, 0.1) 0%, rgba(42, 157, 61, 0.15) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 32px 0;
+            font-style: italic;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .n-body-c1jo p {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* Table Styling (Central Focus) */
+        .x-btn-0aw4-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 32px 0;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+        }
+
+        .x-btn-0aw4 {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+            background: #fff;
+        }
+
+        .x-btn-0aw4 th {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 16px;
+            font-weight: 600;
+            font-family: var(--font-sans);
+        }
+
+        .x-btn-0aw4 td {
+            padding: 16px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .x-btn-0aw4 tr:last-child td {
+            border-bottom: none;
+        }
+
+        .x-btn-0aw4 tr:hover {
+            background-color: #fcfbf9;
+        }
+
+        .n-top-7jhu-num {
+            font-family: var(--font-mono);
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* FAQ Section */
+        .x-item-vyj6-section {
+            background-color: #ffffff;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .x-item-vyj6-item {
+            margin-bottom: 28px;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 20px;
+        }
+
+        .x-item-vyj6-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .x-item-vyj6-q {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .x-item-vyj6-q::before {
+            content: "Q.";
+            color: var(--accent);
+            font-weight: 800;
+            font-family: var(--font-mono);
+        }
+
+        .x-item-vyj6-a {
+            font-size: 1rem;
+            color: #4a4a4a;
+            padding-left: 24px;
+            line-height: 1.7;
+        }
+
+        /* Author Bio Block */
+        .t-list-xy14-card {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 32px;
+            margin-top: 48px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .t-list-xy14-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+            }
+        }
+
+        .t-list-xy14-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .t-list-xy14-text h4 {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .t-list-xy14-text p {
+            font-size: 0.95rem;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .n-list-gslt {
+            background-color: var(--primary);
+            color: #888;
+            padding: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+            border-top: 2px solid var(--accent);
+        }
+
+        /* Search & Filter Simulation Block */
+        .t-card-wyg7-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .t-card-wyg7-input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            font-size: 1rem;
+            outline: none;
+            background-color: #fff;
+        }
+
+        .t-card-wyg7-btn {
+            background-color: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 0 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .t-card-wyg7-btn:hover {
+            background-color: var(--accent);
+        }
+
+        @media (max-width: 480px) {
+            .t-card-wyg7-bar {
+                flex-direction: column;
+            }
+            .t-card-wyg7-btn {
+                padding: 14px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- hash: 3a7f8e9c -->
+
+    <!-- Header Status Bar -->
+    <header class="v-side-3ght-bar">
+        <span class="v-side-3ght-logo">PACK.CLIPDESK.SHOP</span>
+        <span>갱신일: 2023.11.15 · 수록 분석표: 12개</span>
+    </header>
+
+    <!-- Floating Dot Navigation -->
+    <nav class="m-btn-uo34-nav" aria-label="섹션 탐색">
+        <div class="m-btn-uo34-item active" onclick="scrollToSection('masthead')" title="상단"></div>
+        <div class="m-btn-uo34-item" onclick="scrollToSection('intro')" title="비용 분석 개요"></div>
+        <div class="m-btn-uo34-item" onclick="scrollToSection('table-sec')" title="항목 비교표"></div>
+        <div class="m-btn-uo34-item" onclick="scrollToSection('faq-sec')" title="자주 묻는 질문"></div>
+    </nav>
+
+    <main class="m-top-wgqb-wrapper">
+        
+        <!-- Masthead (No Hero Band) -->
+        <div id="masthead" class="m-card-a3sz" role="region" aria-label="블로그 헤더">
+            <h1>짐 줄이는 방법</h1>
+            <p>비용 최적화의 첫걸음은 부피의 객관화와 분류 체계의 정비에 있습니다. 맹목적인 처분이 아닌, 구조적 분석을 통해 불필요한 지출을 통제하는 합리적 가이드를 제공합니다.</p>
+        </div>
+
+        <!-- Search & Category Simulation -->
+        <div class="t-card-wyg7-bar" role="search">
+            <input type="text" class="t-card-wyg7-input" placeholder="줄이고자 하는 품목이나 비용 항목을 입력하세요..." aria-label="검색어 입력">
+            <button type="button" class="t-card-wyg7-btn">검색</button>
+        </div>
+
+        <!-- Semantic Marker A -->
+        <span aria-hidden="true" data-t="f3e2d1c0" style="display:none;">●</span>
+
+        <!-- 3-Column Card Grid (Retro Neo-Brut) -->
+        <div id="intro" class="t-img-yyub-section" role="region" aria-label="핵심 개념 요약">
+            
+            <div class="t-foot-8jo1 v-box-3ng7-border">
+                <div>
+                    <span class="t-foot-8jo1-tag">개념 정의</span>
+                    <h3 class="t-foot-8jo1-title">CBM(부피 단위)의 이해</h3>
+                    <p class="t-foot-8jo1-desc">운송 및 보관의 핵심 기준은 무게가 아닌 부피입니다. 가로, 세로, 높이의 곱이 만드는 여백을 줄이는 것이 비용 통제의 핵심입니다.</p>
+                </div>
+            </div>
+
+            <div class="t-foot-8jo1 v-box-3ng7-border">
+                <div>
+                    <span class="t-foot-8jo1-tag">분류 기준</span>
+                    <h3 class="t-foot-8jo1-title">압축성과 비정형성</h3>
+                    <p class="t-foot-8jo1-desc">의류 등 압축이 가능한 물품과 가구처럼 고정된 부피를 차지하는 비정형 물품의 비율을 정량적으로 파악해야 합니다.</p>
+                </div>
+            </div>
+
+            <div class="t-foot-8jo1 v-box-3ng7-border">
+                <div>
+                    <span class="t-foot-8jo1-tag">비용 구조</span>
+                    <h3 class="t-foot-8jo1-title">한계 비용의 변동성</h3>
+                    <p class="t-foot-8jo1-desc">차량의 톤수 격차와 보관 공간의 최소 격차 단계를 이해하면, 단 몇 개의 박스를 줄임으로써 발생하는 극적인 비용 절감을 경험합니다.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 1-Column Narrative Transition -->
+        <div class="v-ico-up09-section v-box-3ng7-border" role="region" aria-label="비용 구조 상세 해설">
+            <h2 class="v-ico-up09-title">짐의 규모가 비용을 결정하는 정밀한 메커니즘</h2>
+            
+            <p class="q-txt-bylr">
+                우리가 짐을 보관하거나 타 지역으로 이동할 때 발생하는 모든 비용은 철저히 '공간 점유율'에 비례합니다. 많은 이들이 단순히 개별 물품의 개수에 주목하지만, 물류 인프라는 철저히 체적(Volume)을 기준으로 단가를 산정합니다. 따라서 비정형적인 물품을 규격화하고, 압축 가능한 섬유류의 부피를 극한으로 줄이는 작업은 단순한 정리를 넘어 직접적인 지출 절감으로 연결됩니다.
+            </p>
+
+            <p class="q-txt-bylr">
+                처음 서비스를 이용하는 독자분들은 종종 현장에서 발생하는 추가금에 당황하곤 합니다. 이는 사전에 '기본 제공 범위'와 '특수 조건에 따른 별도 항목'을 구체적으로 인지하지 못했기 때문입니다. 물어보는 것은 결코 부끄러운 일이 아니며, 오히려 초기 단계에서 항목 구분을 명확히 요구하는 것이 분쟁을 예방하는 가장 현명한 방법입니다. 실제 청구되는 상세 금액은 각 사용자의 정밀한 환경과 이동 거리에 따라 달라지므로, 본 가이드에서는 금액을 임의로 산정하지 않고 단가를 결정하는 구조적 요인만을 투명하게 다룹니다.
+            </p>
+
+            <!-- Semantic Marker B -->
+            <span aria-hidden="true" data-t="e9a8d7c6" style="display:none;">○</span>
+
+            <div class="n-body-c1jo">
+                <p>"부피를 10% 줄이면, 선택할 수 있는 운송 수단의 대안이 2배로 늘어납니다. 핵심은 버리는 것이 아니라, 빈틈없이 채우고 압축하는 정밀함에 있습니다."</p>
+            </div>
+
+            <p class="q-txt-bylr">
+                특히 엘리베이터의 유무, 사다리차 진입 가능 여부, 작업 인원의 이동 동선 길이에 따라 기본 요율 외에 가산되는 변동 요율이 존재합니다. 이러한 외적 변수들은 고정할 수 없는 영역이기에, 사용자가 스스로 제어할 수 있는 유일한 변수인 '순수 적재 부피'를 줄이는 작업이 무엇보다 중요합니다.
+            </p>
+        </div>
+
+        <!-- Semantic Marker C -->
+        <span aria-hidden="true" data-t="b5v4c3x2" style="display:none;">·</span>
+
+        <!-- Central Table Section -->
+        <div id="table-sec" class="v-ico-up09-section v-box-3ng7-border" role="region" aria-label="조건별 비용 구조 비교표">
+            <h2 class="v-ico-up09-title">부피 및 조건별 비용 영향도 분석표</h2>
+            <p class="q-txt-bylr">
+                아래의 표는 각 조건에 따른 비용 발생 항목과 부피 감축 시 예상되는 변동 영향도를 비교한 데이터입니다. 정밀한 수치적 기준을 통해 본인의 짐 상태가 어느 구간에 속하는지 자가 진단해 보시기 바랍니다.
+            </p>
+
+            <div class="x-btn-0aw4-container">
+                <table class="x-btn-0aw4">
+                    <thead>
+                        <tr>
+                            <th>구분 항목</th>
+                            <th>측정 기준</th>
+                            <th>기본 포함 범위</th>
+                            <th>별도 청구(가산) 조건</th>
+                            <th>부피 감축 시 영향도</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>정형 화물 (규격 박스)</td>
+                            <td class="n-top-7jhu-num">0.12 CBM / 박스</td>
+                            <td>기본 차량 적재 공간</td>
+                            <td>규격 초과 및 파손 위험품</td>
+                            <td>박스 단위 비례 감축</td>
+                        </tr>
+                        <tr>
+                            <td>비정형 가구/가전</td>
+                            <td class="n-top-7jhu-num">1.50 ~ 3.00 CBM</td>
+                            <td>단순 상하차 및 운송</td>
+                            <td>분해·조립 필요 시 기술료</td>
+                            <td>분해 보관 시 부피 40% 감소</td>
+                        </tr>
+                        <tr>
+                            <td>의류 및 침구류</td>
+                            <td class="n-top-7jhu-num">0.45 CBM / 백</td>
+                            <td>포장용 비닐 및 기본 박스</td>
+                            <td>특수 의류 전용 행거 박스</td>
+                            <td>압축팩 적용 시 최대 60% 절감</td>
+                        </tr>
+                        <tr>
+                            <td>진입로 및 작업 환경</td>
+                            <td class="n-top-7jhu-num">거리(m) / 층수</td>
+                            <td>엘리베이터 이용 기본 작업</td>
+                            <td>계단 수작업 (3층 이상 가산)</td>
+                            <td>소형 분할 운반으로 대기료 절감</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="q-txt-bylr" style="margin-top: 24px;">
+                위 표에서 확인하실 수 있듯이, 동일한 양의 의류라 하더라도 포장 방식(압축팩 사용 여부)에 따라 체적 점유율이 절반 이하로 떨어질 수 있습니다. 이는 단순한 공간 절약을 넘어 운송 차량의 규격을 하향 조정할 수 있는 직접적인 임계점을 형성하게 됩니다. 구체적인 운송 및 보관 단가는 개별 견적 문의를 통해 상세히 안내받으실 수 있습니다.
+            </p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div id="faq-sec" class="x-item-vyj6-section v-box-3ng7-border" role="region" aria-label="자주 묻는 질문">
+            <h2 class="v-ico-up09-title">자주 묻는 질문 (FAQ)</h2>
+            
+            <div class="x-item-vyj6-item">
+                <h4 class="x-item-vyj6-q">짐의 부피(CBM)는 어떻게 계산하며, 실제 비용에 어떻게 반영되나요?</h4>
+                <p class="x-item-vyj6-a">
+                    CBM(Cubic Meter)은 가로, 세로, 높이를 미터 단위로 곱한 입방미터 단위입니다. 대부분의 보관 및 운송 서비스는 이 총 체적을 기준으로 차량 크기나 창고 셀 단위를 결정하므로, 소소한 잔짐을 줄여 총 CBM 단계를 한 단계 낮추는 것이 가장 효과적인 절약법입니다.
+                </p>
+            </div>
+
+            <div class="x-item-vyj6-item">
+                <h4 class="x-item-vyj6-q">의류나 이불을 압축팩으로 줄였을 때 비용 절감 효과가 실제로 있나요?</h4>
+                <p class="x-item-vyj6-a">
+                    매우 확실한 효과가 있습니다. 섬유류는 내부 공기층으로 인해 불필요한 체적을 크게 차지하는 대표적인 품목입니다. 압축 전용 팩을 사용해 부피를 최소화하면 정형 박스에 들어가는 밀도가 비약적으로 높아져, 필요한 총 박스 개수 자체를 유의미하게 줄일 수 있습니다.
+                </p>
+            </div>
+
+            <div class="x-item-vyj6-item">
+                <h4 class="x-item-vyj6-q">보관이나 운송 시 '기본 품목'과 '별도 추가 품목'의 경계는 무엇인가요?</h4>
+                <p class="x-item-vyj6-a">
+                    일반적으로 성인 혼자서 안전하게 운반할 수 있는 규격 박스 포장물은 기본 품목에 해당합니다. 반면, 대형 가전, 분해형 침대 프레임, 고가의 악기류 등은 특수 포장과 추가 인력이 강제되므로 별도 품목으로 분류되어 추가 공임이 수반되는 구조입니다.
+                </p>
+            </div>
+
+            <div class="x-item-vyj6-item">
+                <h4 class="x-item-vyj6-q">처음이라 무엇부터 분류해야 할지 모르겠는데, 현장에서 물어봐도 불이익이 없나요?</h4>
+                <p class="x-item-vyj6-a">
+                    전혀 불이익이 없습니다. 오히려 작업 착수 전에 애매한 품목들의 포함 여부와 분류 기준을 담당자에게 투명하게 질의하시는 것이 권장됩니다. 현장에서의 적극적인 소통은 불필요한 오해로 인한 사후 과금 분쟁을 예방하는 가장 안전한 장치입니다.
+                </p>
+            </div>
+        </div>
+
+        <!-- Semantic Marker D -->
+        <span aria-hidden="true" data-t="d4c3b2a1" style="display:none;">~</span>
+
+        <!-- Author Bio Block (E-A-T) -->
+        <div class="t-list-xy14-card v-box-3ng7-border" role="region" aria-label="작성자 소개">
+            <div class="t-list-xy14-avatar">정</div>
+            <div class="t-list-xy14-text">
+                <h4>작성자: 정민우 (공간 최적화 칼럼니스트)</h4>
+                <p>서울 지역을 기반으로 지난 7년간 개인 및 기업의 공간 정리 효율성과 합리적인 물류 비용 구조를 심도 있게 분석해 왔습니다. 불필요한 낭비를 제거하는 투명한 데이터 기반의 가이드를 전해드립니다.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="n-list-gslt">
+        <p>&copy; 2023 PACK.CLIPDESK.SHOP. All rights reserved. 본 사이트는 짐 줄이는 방법 및 비용 구조 분석 정보를 제공하는 비영리 정보 블로그입니다.</p>
+    </footer>
+
+    <!-- hash: 7b8c9d0e -->
+
+    <!-- Simple Interactivity for Floating Nav -->
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Active state logic on scroll
+        window.addEventListener('scroll', () => {
+            const sections = ['masthead', 'intro', 'table-sec', 'faq-sec'];
+            const dots = document.querySelectorAll('.m-btn-uo34-item');
+            
+            let currentActive = 0;
+            sections.forEach((id, index) => {
+                const rect = document.getElementById(id).getBoundingClientRect();
+                if (rect.top <= 150) {
+                    currentActive = index;
+                }
+            });
+
+            dots.forEach((dot, index) => {
+                if (index === currentActive) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
