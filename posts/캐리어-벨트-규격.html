@@ -1,16 +1,351 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
- <meta charset="UTF-8">
- <title>캐리어 벨트 규격 선택 가이드</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>캐리어 벨트 규격 선택 가이드</title>
   <link rel="canonical" href="https://pack.clipdesk.shop/posts/캐리어-벨트-규격.html">
+  
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <style>
+        /* CSS Reset & Variables */
+        :root {
+            --primary: #23201c;
+            --secondary: #fbfbf9;
+            --accent: #347dc5;
+            --accent-light: rgba(52, 125, 197, 0.18);
+            --border-color: rgba(35, 32, 28, 0.15);
+            --font-serif: 'Nanum Myeongjo', 'Noto Serif KR', serif;
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--primary);
+            font-family: var(--font-serif);
+            line-height: 1.8;
+            padding: 0 48px;
+            font-size: 1.05rem;
+            letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Semantic Marker Hidden Style */
+        .v-side-90ti-marker {
+            display: none !important;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+
+        /* Header Style (Status Bar) */
+        .v-img-dq1i-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 2px solid var(--primary);
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Title Block */
+        .t-box-bjlv-block {
+            padding: 80px 0 48px 0;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        .v-side-630i-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            font-family: var(--font-serif);
+        }
+
+        .k-body-k11v-title {
+            font-size: 1.15rem;
+            font-family: var(--font-sans);
+            color: #555;
+            font-weight: 400;
+            max-width: 800px;
+        }
+
+        /* Main Grid Layout (Date Journal DNA) */
+        .v-side-630i-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .q-grid-eyvz {
+            display: grid;
+            grid-template-columns: 8rem 1fr;
+            gap: 48px;
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Left Column: Date & Metadata (Grotesque Style) */
+        .q-grid-eyvz-meta {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            padding-top: 6px;
+        }
+
+        .q-grid-eyvz-meta span {
+            display: block;
+            margin-bottom: 4px;
+            color: #888;
+        }
+
+        .q-grid-eyvz-meta .k-img-xmm3-highlight {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        /* Right Column: Content Body (Serif Style) */
+        .q-grid-eyvz-body {
+            max-width: 780px;
+        }
+
+        .q-grid-eyvz-body h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .q-grid-eyvz-body p {
+            margin-bottom: 24px;
+            color: #2c2924;
+            text-align: justify;
+        }
+
+        /* Highlighter Underline */
+        .t-body-qcez {
+            background: linear-gradient(transparent 62%, var(--accent-light) 62%);
+            font-weight: 700;
+            padding: 0 2px;
+        }
+
+        /* Table Design (Precision Data) */
+        .m-side-rcur-table-wrapper {
+            margin: 32px 0;
+            overflow-x: auto;
+        }
+
+        .m-side-rcur-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        .m-side-rcur-table th {
+            border-bottom: 2px solid var(--primary);
+            padding: 12px 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #555;
+        }
+
+        .m-side-rcur-table td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 8px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .m-side-rcur-table tr:hover {
+            background-color: rgba(35, 32, 28, 0.02);
+        }
+
+        /* Quiet Blockquote (Rhythm Breaker) */
+        .v-list-9kog-quote {
+            grid-column: 1 / -1;
+            padding: 80px 10% !important;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .v-list-9kog-quote blockquote {
+            font-size: 1.6rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--accent);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .v-list-9kog-quote cite {
+            display: block;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            font-family: var(--font-sans);
+            font-style: normal;
+            letter-spacing: 0.1em;
+            color: #777;
+            text-transform: uppercase;
+        }
+
+        /* FAQ Section styling inside the Date Journal grid */
+        .t-item-rljr-list {
+            margin-top: 24px;
+        }
+
+        .t-item-rljr-item {
+            margin-bottom: 32px;
+        }
+
+        .t-item-rljr-question {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary);
+            font-family: var(--font-serif);
+        }
+
+        .t-item-rljr-answer {
+            color: #4a453f;
+            line-height: 1.7;
+        }
+
+        /* Author Bio Block */
+        .x-main-jsm5-section {
+            padding: 48px 0;
+            border-bottom: 1px solid var(--primary);
+            font-family: var(--font-sans);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 780px;
+            margin-left: auto;
+        }
+
+        .x-main-jsm5-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .x-main-jsm5-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .x-main-jsm5-desc {
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Floating Dot Navigation (Retro Neo-Brut element) */
+        .k-main-mp1f-nav {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 100;
+        }
+
+        .k-main-mp1f {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(35, 32, 28, 0.3);
+            border: 1px solid var(--primary);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .k-main-mp1f:hover,
+        .k-main-mp1f.active {
+            background-color: var(--accent);
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 0 20px;
+            }
+
+            .v-side-630i-title {
+                font-size: 2.2rem;
+            }
+
+            .q-grid-eyvz {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 40px 0;
+            }
+
+            .q-grid-eyvz-meta {
+                border-bottom: 1px dashed var(--border-color);
+                padding-bottom: 12px;
+            }
+
+            .v-list-9kog-quote {
+                padding: 40px 5% !important;
+            }
+
+            .v-list-9kog-quote blockquote {
+                font-size: 1.25rem;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
   <meta property="og:url" content="https://pack.clipdesk.shop/posts/캐리어-벨트-규격.html">
   <meta property="og:title" content="캐리어 벨트 규격 선택 가이드">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-
+  <div class="container">
+    <header class="v-img-dq1i-bar">
+        <div>PACK.CLIPDESK.SHOP</div>
+        <div>SEOUL — BLOG</div>
+        <div>ENTRIES: 05 [VER: 6.0]</div>
+    </header>
+    <main>
 <h1>길이 조절만 믿고 캐리어 벨트를 사면 공항 수하물 컨베이어 벨트에서 낭패를 보는 이유</h1>
 
 <p>캐리어 벨트는 길이 조절 범위를 늘리면 모든 크기에 맞을 것이라 착각하기 쉽습니다. 하지만 정작 20인치 기내용 캐리어에 채우면 헐거워서 고정이 안 되고, 28인치 대형 캐리어에 세로로 채우려면 길이가 모자라 아예 잠기지 않는 상황이 빈번합니다. 일자형 벨트의 가용 길이는 보통 100에서 최대 180센티미터 내외인데, 캐리어 둘레가 부피에 따라 급격히 늘어난다는 사실을 무시한 결과입니다. 본인 캐리어의 둘레를 자로 측정해보는 최소한의 성의도 없으니 엉뚱한 규격을 사서 반품 배송비만 낭비하는 겁니다.</p>
@@ -33,6 +368,7 @@
 <p>이중 잠금장치가 탑재된 제품을 고르면 터짐 사고를 상당 부분 억제할 수 있습니다. 라운드샵 이중잠금 터짐방지 여행 캐리어 벨트는 2026-08-12 기준 10,000원이라는 가격에 버클 풀림을 막는 이중 구조를 취하고 있어 물리적 안정성은 올라갑니다. 하지만 이러한 방식은 세관 검사 시 가방을 긴급히 열어야 할 때 직접 풀기가 번거롭다는 단점이 있습니다. 본인의 사용 패턴을 고려하지 않고 무작정 이중 잠금 방식을 선택했다가는 공항에서 버클과 씨름하는 상황을 겪게 될 것입니다.</p>
 
 <p>규격을 고를 때는 둘레 센티미터를 기준으로 삼고, 신축성과 고정 메커니즘의 타협점을 찾아야 합니다. 폭이 좁은 38밀리미터 벨트는 면적이 좁아 가방을 지탱하는 힘이 약하므로, 최소한 50밀리미터 이상의 광폭 규격을 선택하는 것이 내부 압력을 버티는 데 유리합니다. 디자인만 볼 게 아니라 규격 수치와 버클의 인장 강도라는 논리적 지표를 대조해 보시기 바랍니다.</p>
-
+    </main>
+  </div>
 </body>
 </html>

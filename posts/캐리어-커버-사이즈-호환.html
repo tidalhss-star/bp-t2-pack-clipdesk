@@ -1,16 +1,351 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
- <meta charset="UTF-8">
- <title>캐리어 커버 사이즈 호환성 분석</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>캐리어 커버 사이즈 호환성 분석</title>
   <link rel="canonical" href="https://pack.clipdesk.shop/posts/캐리어-커버-사이즈-호환.html">
+  
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <style>
+        /* CSS Reset & Variables */
+        :root {
+            --primary: #23201c;
+            --secondary: #fbfbf9;
+            --accent: #347dc5;
+            --accent-light: rgba(52, 125, 197, 0.18);
+            --border-color: rgba(35, 32, 28, 0.15);
+            --font-serif: 'Nanum Myeongjo', 'Noto Serif KR', serif;
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--primary);
+            font-family: var(--font-serif);
+            line-height: 1.8;
+            padding: 0 48px;
+            font-size: 1.05rem;
+            letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Semantic Marker Hidden Style */
+        .v-side-90ti-marker {
+            display: none !important;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+
+        /* Header Style (Status Bar) */
+        .v-img-dq1i-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 2px solid var(--primary);
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Title Block */
+        .t-box-bjlv-block {
+            padding: 80px 0 48px 0;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        .v-side-630i-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            font-family: var(--font-serif);
+        }
+
+        .k-body-k11v-title {
+            font-size: 1.15rem;
+            font-family: var(--font-sans);
+            color: #555;
+            font-weight: 400;
+            max-width: 800px;
+        }
+
+        /* Main Grid Layout (Date Journal DNA) */
+        .v-side-630i-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .q-grid-eyvz {
+            display: grid;
+            grid-template-columns: 8rem 1fr;
+            gap: 48px;
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Left Column: Date & Metadata (Grotesque Style) */
+        .q-grid-eyvz-meta {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            padding-top: 6px;
+        }
+
+        .q-grid-eyvz-meta span {
+            display: block;
+            margin-bottom: 4px;
+            color: #888;
+        }
+
+        .q-grid-eyvz-meta .k-img-xmm3-highlight {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        /* Right Column: Content Body (Serif Style) */
+        .q-grid-eyvz-body {
+            max-width: 780px;
+        }
+
+        .q-grid-eyvz-body h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .q-grid-eyvz-body p {
+            margin-bottom: 24px;
+            color: #2c2924;
+            text-align: justify;
+        }
+
+        /* Highlighter Underline */
+        .t-body-qcez {
+            background: linear-gradient(transparent 62%, var(--accent-light) 62%);
+            font-weight: 700;
+            padding: 0 2px;
+        }
+
+        /* Table Design (Precision Data) */
+        .m-side-rcur-table-wrapper {
+            margin: 32px 0;
+            overflow-x: auto;
+        }
+
+        .m-side-rcur-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        .m-side-rcur-table th {
+            border-bottom: 2px solid var(--primary);
+            padding: 12px 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #555;
+        }
+
+        .m-side-rcur-table td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 8px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .m-side-rcur-table tr:hover {
+            background-color: rgba(35, 32, 28, 0.02);
+        }
+
+        /* Quiet Blockquote (Rhythm Breaker) */
+        .v-list-9kog-quote {
+            grid-column: 1 / -1;
+            padding: 80px 10% !important;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .v-list-9kog-quote blockquote {
+            font-size: 1.6rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--accent);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .v-list-9kog-quote cite {
+            display: block;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            font-family: var(--font-sans);
+            font-style: normal;
+            letter-spacing: 0.1em;
+            color: #777;
+            text-transform: uppercase;
+        }
+
+        /* FAQ Section styling inside the Date Journal grid */
+        .t-item-rljr-list {
+            margin-top: 24px;
+        }
+
+        .t-item-rljr-item {
+            margin-bottom: 32px;
+        }
+
+        .t-item-rljr-question {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary);
+            font-family: var(--font-serif);
+        }
+
+        .t-item-rljr-answer {
+            color: #4a453f;
+            line-height: 1.7;
+        }
+
+        /* Author Bio Block */
+        .x-main-jsm5-section {
+            padding: 48px 0;
+            border-bottom: 1px solid var(--primary);
+            font-family: var(--font-sans);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 780px;
+            margin-left: auto;
+        }
+
+        .x-main-jsm5-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .x-main-jsm5-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .x-main-jsm5-desc {
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Floating Dot Navigation (Retro Neo-Brut element) */
+        .k-main-mp1f-nav {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 100;
+        }
+
+        .k-main-mp1f {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(35, 32, 28, 0.3);
+            border: 1px solid var(--primary);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .k-main-mp1f:hover,
+        .k-main-mp1f.active {
+            background-color: var(--accent);
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 0 20px;
+            }
+
+            .v-side-630i-title {
+                font-size: 2.2rem;
+            }
+
+            .q-grid-eyvz {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 40px 0;
+            }
+
+            .q-grid-eyvz-meta {
+                border-bottom: 1px dashed var(--border-color);
+                padding-bottom: 12px;
+            }
+
+            .v-list-9kog-quote {
+                padding: 40px 5% !important;
+            }
+
+            .v-list-9kog-quote blockquote {
+                font-size: 1.25rem;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
   <meta property="og:url" content="https://pack.clipdesk.shop/posts/캐리어-커버-사이즈-호환.html">
   <meta property="og:title" content="캐리어 커버 사이즈 호환성 분석">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-
+  <div class="container">
+    <header class="v-img-dq1i-bar">
+        <div>PACK.CLIPDESK.SHOP</div>
+        <div>SEOUL — BLOG</div>
+        <div>ENTRIES: 05 [VER: 6.0]</div>
+    </header>
+    <main>
 <h1>캐리어 커버, 인치만 보고 샀다간 낭패 보는 진짜 이유</h1>
 
 <p>캐리어 커버를 살 때 가장 흔하면서도 한심한 실수는 자기 캐리어가 24인치라고 해서 무턱대고 24인치 커버를 장바구니에 담는 행위입니다. 캐리어 제조사마다 가로, 세로, 두께 비율이 제각각이고, 바퀴를 제외한 본체만의 순수 높이를 측정하지 않으면 백퍼센트 안 맞습니다. 게다가 정면을 기준으로 측면 손잡이가 왼쪽에 있는지 오른쪽에 있는지 확인조차 안 하고 구매했다가, 손잡이 구멍이 반대쪽에 뚫려 있어 가방을 들지 못하는 촌극이 매일같이 발생합니다.</p>
@@ -33,6 +368,7 @@
 <p>실제 구매자들의 반응을 분석해 보면 오판의 원인이 명확히 보입니다. 2026년 8월 12일 기준 14,240원에 판매되는 드리지앤 두꺼운 캐리어 투명 방수 커버 고급형의 경우에도 하단 벨크로가 바닥에 쓸려 찢어졌다는 불만이 가끔 보입니다. 이는 제품 본체 세로 길이보다 커버가 길어서 생기는 현상이며, 바퀴를 포함한 높이로 오인해 치수를 크게 주문한 구매자 본인의 전형적인 측정 오류 탓입니다.</p>
 
 <p>또한 개봉 직후 특유의 석유계 냄새와 뻑뻑한 질감은 염화비닐 소재의 고유한 물리적 특성입니다. 냄새에 민감하다면 그늘진 베란다에 이틀간 걸어두어 가스를 빼야 하며, 겨울철에 뻣뻣해서 씌우기 힘들 때는 헤어드라이어의 약한 온풍을 멀리서 쐬어주며 늘려야 모서리가 터지는 불상사를 막을 수 있습니다. 이런 기초적인 관리 지식도 없이 무작정 힘으로 당기다가 찢어트리는 과실을 범하지 마십시오.</p>
-
+    </main>
+  </div>
 </body>
 </html>
