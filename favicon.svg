@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img">
+  <title>t2-pack-clipdesk</title>
+  <rect width="64" height="64" rx="13" fill="hsl(216 61% 37%)"/>
+  <g transform="rotate(180 32 32)"><rect x="15" y="15" width="28" height="28" rx="6" fill="none" stroke="hsl(216 24% 96%)" stroke-width="8"/><rect x="25" y="25" width="24" height="24" rx="6" fill="hsl(13 68% 64%)"/></g>
+</svg>
